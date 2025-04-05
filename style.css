@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+.changelog-container {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+h1 {
+    color: white;
+    background-color: rgba(14, 14, 223, 0.678);
+    border-radius: 12px;
+    margin-bottom: 5px;
+    font-size: 24px;
+}
+p.subtitle {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.timeline {
+    position: relative;
+    margin: 20px 0;
+}
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: black;
+    transform: translateX(-50%);
+}
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.timeline-item::before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.date {
+    font-size: 14px;
+    color: rgba(13, 13, 201, 0.562);
+    width: 45%;
+    text-align: right;
+    padding-right: 20px;
+}
+.description {
+    text-align: left;
+    width: 45%;
+    padding-left: 20px;
+}
+.button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background: rgb(76, 76, 153);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    border: 2px solid white;
+}
+@media (max-width: 600px) {
+    .timeline::before {
+        left: 20px;
+            }
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 40px;
+            }
+    .timeline-item::before {
+                left: 20px;
+            }
+    .date, .description {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        margin-bottom: 5px;
+            }
+}
